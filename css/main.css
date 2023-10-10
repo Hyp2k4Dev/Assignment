@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+  background-color: #3ba66b;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.search-container {
+  display: flex;
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.search-auto {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+
+.search-button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  fill: white;
+  background-color: #ffb416;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.search-icon{
+    color: white;align-items: center;
+}
+.search-button:hover {
+  background-color: #198754;
+}
+
+@media screen and (max-width: 768px) {
+  .search-auto {
+    max-width: 100%;
+  }
+
+  #left-menu,
+  #right-menu {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #left-menu li,
+  #right-menu li {
+    display: block;
+    margin-right: 0;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+#banner img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul#right-menu.search {
+  width: 100px;
+  height: 30px;
+}
+
+#logo {
+  position: relative;
+}
+
+section {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+#left-menu {
+  display: flex;
+  padding-left: 100px;
+}
+
+#right-menu {
+  display: flex;
+  padding-right: 100px;
+  align-items: center;
+}
+
+#right-menu li {
+  margin-right: 20px;
+  list-style: none;
+  display: flex;
+}
+
+#right-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.login,
+.register {
+  color: black !important;
+}
+
+#account {
+  position: relative;
+}
+
+#account-options {
+  width: 70px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: #000;
+  background: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#account:hover #account-options {
+  display: block;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 237, 138);
+}
+
+#account:hover a {
+  color: rgb(255, 237, 138);
+}
+#product-menu:hover .product-submenu {
+    display: block;
+  color: #000;
+    
+}
+
+#fruit-menu:hover .fruit-submenu {
+    color: #000;
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1;
+}
+.submenu.product-submenu{
+    display: none;
+}
+
+.hat-giong,
+.hai-san,
+.rau-cu-qua,
+.san-pham-ban-chay,
+.thit-tuoi-song,
+.thuc-pham-tet,
+.thuc-pham-kho,.trai-cay{
+    color: #000;
+    padding-top: 5px;
+}
+/*  */
