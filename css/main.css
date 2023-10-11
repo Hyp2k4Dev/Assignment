@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font:15px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
 
 header {
   display: flex;
@@ -54,9 +58,12 @@ nav ul li a {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.search-icon{
-    color: white;align-items: center;
+
+.search-icon {
+  color: white;
+  align-items: center;
 }
+
 .search-button:hover {
   background-color: #198754;
 }
@@ -88,26 +95,19 @@ main {
   flex-wrap: wrap;
   padding: 20px;
 }
+.header .middle-header:after {
+  content: "";
+  background: url(/img/logo.png) no-repeat top center;
+  position: absolute;
+  width: 100%;
+  height: 47px;
+  bottom: -47px;
+  z-index: 9;
+}
+
 #banner img {
   max-width: 100%;
   height: auto;
-}
-
-ul#right-menu.search {
-  width: 100px;
-  height: 30px;
-}
-
-#logo {
-  position: relative;
-}
-
-section {
-  flex: 1;
-  padding: 20px;
-  border: 1px solid #ccc;
-  margin: 10px;
-  text-align: center;
 }
 
 footer {
@@ -149,7 +149,7 @@ footer {
 }
 
 #account-options {
-  width: 70px;
+  width: 80px;
   display: none;
   position: absolute;
   top: 100%;
@@ -173,37 +173,69 @@ nav ul li a:hover {
 #account:hover a {
   color: rgb(255, 237, 138);
 }
+
 #product-menu:hover .product-submenu {
-    display: block;
+  display: block;
   color: #000;
-    
+}
+.product-submenu li {
+  margin: 0;
+  border-bottom: 1px solid #eeeeee;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-#fruit-menu:hover .fruit-submenu {
-    color: #000;
-    display: block;
+.product-submenu .submenu li {
+  border-bottom: 1px solid #eeeeee;
+}
+
+#fruit-menu .submenu {
+  width: 100px;
+  position: absolute;
+  background-color: white;
+  display: none;
+  z-index: 1;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  left: 150px;
+  top: 2px;
+  text-align: left;
+}
+
+#fruit-menu:hover .submenu {
+  display: block;
 }
 
 .submenu {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1;
-}
-.submenu.product-submenu{
-    display: none;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  z-index: 1;
 }
 
-.hat-giong,
-.hai-san,
-.rau-cu-qua,
-.san-pham-ban-chay,
-.thit-tuoi-song,
-.thuc-pham-tet,
-.thuc-pham-kho,.trai-cay{
-    color: #000;
-    padding-top: 5px;
+.submenu.product-submenu {
+  display: none;
 }
-/*  */
+
+#product-menu:hover .submenu li a {
+  color: black;
+}
+
+#product-menu:hover .submenu li a:hover {
+  color: rgb(255, 237, 138);
+}
+
+.submenu.product-submenu li {
+  transition: transform 0.3s;
+}
+
+.submenu.product-submenu li:hover {
+  transform: scale(1.1);
+}
+
+svg.bi .bi-caret-right-fill {
+  position: relative;
+}
